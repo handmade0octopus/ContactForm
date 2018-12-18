@@ -26,6 +26,15 @@ body {
     text-align: center;
 }
 
+.image {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+    height: auto;
+    display: block;
+}
+
 .container {
     max-width: 600px;
     width: 100%;
@@ -98,7 +107,7 @@ body {
 }
 
 .gridview {
-    max-width: 800px;
+    max-width: 1000px;
     width: 100%;
     margin: 0 auto;
     position: relative;
@@ -107,6 +116,7 @@ body {
     border-style: none;
     border-width: 0px;
     text-align: center;
+    box-shadow: 0 0 50px 0 rgba(239, 191, 48, 0.7), 0 10px 10px 0 rgba(239, 191, 48, 0.2);
 }
 
 fieldset {

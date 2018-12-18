@@ -3,26 +3,27 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server" >
     <div class="container">
         <fieldset>
+            <a href="http://sorek.uk" target="_blank" title="sorek.uk"><img class="image" src="logo.png" alt="sorek.uk" /></a>
             <h3 class="welcome">Welcome to my contact page</h3>
         </fieldset>
         <fieldset>
             Full Name <br />
             <fieldset>
-                <asp:TextBox class="textboxarea" ID="txtName" MaxLength="40" runat="server" required="true" />
+                <asp:TextBox class="textboxarea" ID="txtName" MaxLength="100" runat="server" required="true" />
             </fieldset>
         </fieldset>
         
         <fieldset>
                 Email address <br />
             <fieldset>
-                <asp:TextBox class="textboxarea" type="email" ID="txtEmail" MaxLength="40" runat="server" required="true" />
+                <asp:TextBox class="textboxarea" type="email" ID="txtEmail" MaxLength="100" runat="server" required="true" />
             </fieldset>
         </fieldset>
 
         <fieldset>
                 Phone number <br />
             <fieldset>
-                <asp:TextBox class="textboxarea" input="txtNumber" ID="txtNumber" MaxLength="11" runat="server" required="true" />
+                <asp:TextBox class="textboxarea" ID="txtNumber" MaxLength="30" runat="server" required="true" />
             </fieldset>
         </fieldset>
 
@@ -45,9 +46,11 @@
         </fieldset>
 
          <fieldset>
-        <asp:Button class="submitbutton" ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click"/>
+             <asp:Label Font-Size="16" Text="Submitted!" runat="server" Visible="false" ID="lblSubmitted" ForeColor="Green" />
+             <asp:Button class="submitbutton" ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
         </fieldset>
 
+        <fieldset>
         <h4 class="error">
                 <asp:Label Text="" ID="lblAfterSubmit" runat="server" Visible="true" />
                 <asp:RequiredFieldValidator runat="server" ID="rfvName" ControlToValidate="txtName" ErrorMessage="Name required <br />" display="Dynamic"/> 
@@ -57,15 +60,17 @@
                 <asp:RequiredFieldValidator runat="server" ID="rfvNumber" ControlToValidate="txtNumber" ErrorMessage="Phone number required <br />" display="Dynamic"/> 
                 <asp:RegularExpressionValidator runat="server" ID="revNumber" ValidationExpression="^[+]?[0-9]{4,11}$"  ControlToValidate="txtNumber" ErrorMessage="Valid phone number required <br />" display="Dynamic"/> 
                 <asp:CustomValidator runat="server" ID="rfvGdpr" onservervalidate="rfvGdpr_ServerValidate" ErrorMessage="GDPR and T&C required <br />" display="Dynamic"/> 
-                <asp:RegularExpressionValidator runat="server" ID="revMessage" ValidationExpression="[^\s]{0,255}"  ControlToValidate="txtMessage" ErrorMessage="Message too long <br />" display="Dynamic"/> 
+                <asp:RegularExpressionValidator runat="server" ID="revMessage" ValidationExpression=".{0,255}"  ControlToValidate="txtMessage" ErrorMessage="Message too long <br />" display="Dynamic"/> 
         </h4>
+            </fieldset>
         
+        <p class="copyright">Designed by <a href="http://sorek.uk" target="_blank" title="sorek.uk">sorek.uk</a>
     </div>
 
     <br />
+
     <div>
-    </div>
-       <asp:GridView class="gridview" GridLines="None" ID="gvContact" runat="server" AutoGenerateColumns="false" OnRowDeleting="gvContact_RowDeleting" OnRowEditing="gvContact_RowEditing" OnRowUpdating="gvContact_RowUpdating" OnRowCancelingEdit="gvContact_RowCancelingEdit">
+       <asp:GridView  class="gridview" GridLines="None" ID="gvContact" runat="server" AutoGenerateColumns="false" OnRowDeleting="gvContact_RowDeleting" OnRowEditing="gvContact_RowEditing" OnRowUpdating="gvContact_RowUpdating" OnRowCancelingEdit="gvContact_RowCancelingEdit">
            <Columns>
                <asp:TemplateField>
                    <ItemTemplate>
@@ -83,5 +88,6 @@
 
            </Columns>
        </asp:GridView>
+       </div>
     </asp:Content>
 

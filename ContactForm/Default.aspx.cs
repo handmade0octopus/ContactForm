@@ -49,6 +49,7 @@ public partial class _Default : System.Web.UI.Page {
             }
             else newsletter = 0;
             TextBox txMessage = txtMessage;
+
             using (Connect())
             {
                 try
@@ -63,6 +64,7 @@ public partial class _Default : System.Web.UI.Page {
                         string sql = string.Format("INSERT INTO contact (name, email, number, gdpr, newsletter, message) values ('{0}', '{1}', '{2}', {3}, {4}, '{5}')", txName.Text, txEmail.Text, txNumber.Text, gdpr, newsletter, txMessage.Text);
                         MySqlCommand command = new MySqlCommand(sql, connection);
                         command.ExecuteNonQuery();
+                        lblSubmitted.Visible=true;
                     }
                     
                 }
