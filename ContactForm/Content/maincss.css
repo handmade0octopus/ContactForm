@@ -1,0 +1,118 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 30px;
+    color: #777;
+    background: #1A1529;
+}
+
+.welcome {
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    background: #F9F9F9;
+    padding: 25px;
+    margin: 0 auto;
+    box-shadow: 0 0 50px 0 rgba(239, 191, 48, 0.7), 0 10px 10px 0 rgba(239, 191, 48, 0.2);
+}
+
+
+.copyright {
+    text-align: center;
+}
+
+.submitbutton {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #EFBF30;
+    color: #1A1529;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    .submitbutton:hover {
+        background: #1A1529;
+        color: #EFBF30;
+        -webkit-transition: background 0.3s ease-in-out;
+        -moz-transition: background 0.3s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+.textboxarea {
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 5px;
+}
+
+.box {
+    height: 100px;
+    max-width: 100%;
+    resize: none;
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+}
+
+    .textboxarea:hover,
+    .box:hover {
+        -webkit-transition: border-color 0.3s ease-in-out;
+        -moz-transition: border-color 0.3s ease-in-out;
+        transition: border-color 0.3s ease-in-out;
+        border: 1px solid #aaa;
+    }
+
+.error {
+    color: red;
+}
+
+.gridview {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    background: #FFF;
+    border: none;
+    border-style: none;
+    border-width: 0px;
+    text-align: center;
+}
+
+fieldset {
+    border: medium none !important;
+    margin: 0 0 5px;
+    min-width: 100%;
+    padding: 0;
+    width: 100%;
+}
