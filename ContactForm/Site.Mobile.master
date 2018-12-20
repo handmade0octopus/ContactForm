@@ -6,8 +6,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
     <meta name="viewport" content="width=device-width" />
-    <title></title>
+    <title><%: Page.Title %></title>
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="Stylesheet" href="~/Content/maincss.css" type="text/css" />
 </head>
 <body>
     <form id="form1" runat="server">
